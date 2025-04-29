@@ -1,0 +1,57 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.8.1 (swiftlang-5.8.0.124.5 clang-1403.0.22.11.100)
+// swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name AudioMobOpenMeasurement
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import Foundation
+import Swift
+import _Concurrency
+import _StringProcessing
+@_exported import __ObjC
+public class AudiomobOpenMeasurement {
+  public init()
+  public func start(_ audiomobVersionString: Swift.String) -> Swift.Bool
+  public func startMeasurement(_ vendor: Swift.String?, _ resource: Swift.String, _ parameters: Swift.String?, _ duration: Swift.Float, _ adFormatInt: Swift.Int) -> Swift.Bool
+  public func recordEvent(_ trackingEventInt: Swift.Int) -> Swift.Bool
+  public func stopMeasurement() -> Swift.Bool
+  @objc deinit
+}
+public enum TrackingEvent : Swift.Int {
+  case impression
+  case start
+  case firstQuartile
+  case midpoint
+  case thirdQuartile
+  case finished
+  case paused
+  case resumed
+  case skipped
+  case clicked
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum AdFormat : Swift.Int {
+  case rewarded
+  case skippable
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@_cdecl("audiomobOmsdk_start")
+public func audiomobOmsdk_start(_ audiomobVersionString: Swift.UnsafePointer<Swift.CChar>?) -> Swift.Bool
+@_cdecl("audiomobOmsdk_startMeasurement")
+public func audiomobOmsdk_startMeasurement(_ vendor: Swift.UnsafePointer<Swift.CChar>?, _ resource: Swift.UnsafePointer<Swift.CChar>?, _ parameters: Swift.UnsafePointer<Swift.CChar>?, _ duration: Swift.Float, _ adFormatInt: Swift.Int) -> Swift.Bool
+@_cdecl("audiomobOmsdk_recordEvent")
+public func audiomobOmsdk_recordEvent(trackingEventInt: Swift.Int) -> Swift.Bool
+@_cdecl("audiomobOmsdk_stopMeasurement")
+public func audiomobOmsdk_stopMeasurement() -> Swift.Bool
+extension AudioMobOpenMeasurement.TrackingEvent : Swift.Equatable {}
+extension AudioMobOpenMeasurement.TrackingEvent : Swift.Hashable {}
+extension AudioMobOpenMeasurement.TrackingEvent : Swift.RawRepresentable {}
+extension AudioMobOpenMeasurement.AdFormat : Swift.Equatable {}
+extension AudioMobOpenMeasurement.AdFormat : Swift.Hashable {}
+extension AudioMobOpenMeasurement.AdFormat : Swift.RawRepresentable {}

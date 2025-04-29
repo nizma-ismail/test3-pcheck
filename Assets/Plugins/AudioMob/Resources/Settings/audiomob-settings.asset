@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 999031254, guid: 228598c950c4d4a6db99674c82bd90e5, type: 3}
+  m_Name: audiomob-settings
+  m_EditorClassIdentifier: 
+  forceTestAds: 1
+  useLocation: 0
+  sendConsentStrings: 1
+  sendAdvertisingId: 1
+  sendIdfvOrAndroidIdAsAFallback: 0
+  doNotSendAnyDeviceIdsForNonConsentedUsers: 0
+  onlySendContextualSignals: 0
+  apiKey: 0Ilp3knatlHZajmWWbfk
+  consentFramework: 1
+  autoInitializePlugin: 1
+  muteOtherAudioSources: 0
+  productionBuildCheck: 1
+  loggingMode: 0
+  fileLoggingMode: 0
+  developmentSnapshot:
+    allowUnsafeCode: 0
+    scriptingRuntimeVersion: 
+    androidScriptingBackend: 
+    iosScriptingBackend: 
+    androidApiCompatibilityLevel: 
+    iosApiCompatibilityLevel: 
+    minSdkVersion: 
+    targetOSVersionString: 
+    targetArchitectures: 
+    androidScriptingDefineSymbols: 
+    iosScriptingDefineSymbols: 
+    stripEngineCode: 0
+    androidManagedStrippingLevel: 
+    iosManagedStrippingLevel: 
+    androidTVCompatibility: 0
+    useOnDemandResources: 0
+    locationUsageDescription: 
+    requiresPersistentWiFi: 0
